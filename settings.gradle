@@ -13,6 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "WotCore"
+rootProject.name = "AndroidCore"
 
 include ':app'
+include ':android_core'
