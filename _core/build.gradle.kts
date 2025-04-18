@@ -5,15 +5,15 @@ plugins {
 
 android {
     namespace = "wot.core"
-    compileSdkVersion(34)
+    compileSdk = libs.versions.compile.sdk.get().toInt()
 
     buildFeatures {
         buildConfig = true
     }
 
     defaultConfig {
-        minSdkVersion(21)
-        targetSdkVersion(34)
+        minSdk = libs.versions.min.sdk.get().toInt()
+        targetSdk = libs.versions.target.sdk.get().toInt()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -50,6 +50,6 @@ dependencies {
         api(project(it))
     }
 
-    api("androidx.core:core-ktx:1.10.1")
-    api("androidx.appcompat:appcompat:1.6.1")
+    api(libs.core.ktx)
+    api(libs.appcompat)
 }

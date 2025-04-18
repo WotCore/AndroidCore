@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "wot.core.demo"
-    compileSdkVersion(34)
+    compileSdk = libs.versions.compile.sdk.get().toInt()
 
     buildFeatures {
         buildConfig = true
@@ -16,8 +16,8 @@ android {
 
     defaultConfig {
         applicationId = "wot.core.demo"
-        minSdkVersion(21)
-        targetSdkVersion(34)
+        minSdk = libs.versions.min.sdk.get().toInt()
+        targetSdk = libs.versions.target.sdk.get().toInt()
         versionCode = 100000
         versionName = "1.0.0"
 
@@ -64,5 +64,5 @@ dependencies {
     // 核心模块
     implementation(project(":_core"))
 
-    implementation("com.google.android.material:material:1.11.0") // 确保版本够新
+    implementation(libs.material)
 }
