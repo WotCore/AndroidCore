@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import wot.android.core.livedata.FlexibleLiveData
+import wot.core.livedata.FlexibleLiveData
 import wot.core.demo.R
 
 /**

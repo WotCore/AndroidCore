@@ -1,4 +1,4 @@
-package wot.android.core.livedata
+package wot.core.livedata
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData

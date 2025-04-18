@@ -15,5 +15,19 @@ dependencyResolutionManagement {
 
 rootProject.name = "AndroidCore"
 
+include ':_core'
+
+// 自动引入 _lib下的模块
+def libDir = new File(rootDir, "_lib")
+if (libDir.exists() && libDir.isDirectory()) {
+    libDir.listFiles()?.each { file ->
+        if (file.isDirectory() && (new File(file, "build.gradle").exists() || new File(file, "build.gradle.kts").exists())) {
+            def moduleName = file.name
+            include ":_lib:${moduleName}"
+            project(":_lib:${moduleName}").projectDir = file
+        }
+    }
+}
+
 include ':app'
-include ':android_core'
+
