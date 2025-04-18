@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'wot.core'
+    namespace 'wot.core.ext'
     compileSdk 34
 
     buildFeatures {
@@ -40,10 +40,7 @@ android {
 
 dependencies {
 
-    api 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.core:core-ktx:1.10.1'
 
-    api 'androidx.appcompat:appcompat:1.6.1'
-
-    api project(':_lib:logcat')
-    api project(':_lib:utils')
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }
