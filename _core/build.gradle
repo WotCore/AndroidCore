@@ -39,11 +39,17 @@ android {
 }
 
 dependencies {
+    // 自动导入 _lib 下的模块
+    def libModules = new File(rootDir, '_lib')
+            .listFiles()
+            ?.findAll { it.isDirectory() && new File(it, 'build.gradle').exists() }
+            ?.collect { ":_lib:${it.name}" }
+    libModules?.each {
+        api project(it)
+    }
 
     api 'androidx.core:core-ktx:1.10.1'
 
     api 'androidx.appcompat:appcompat:1.6.1'
 
-    api project(':_lib:logcat')
-    api project(':_lib:utils')
 }
