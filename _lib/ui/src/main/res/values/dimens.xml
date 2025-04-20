@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lib_ui_loading_dialog_radius">3.84dp</dimen>
+    <dimen name="lib_ui_loading_dialog_progress_bar_size">24dp</dimen>
+    <dimen name="lib_ui_loading_dialog_progress_bar_margin">19.2dp</dimen>
+</resources>
