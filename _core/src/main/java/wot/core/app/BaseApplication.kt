@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import wot.core.logcat.Logcat
 import wot.core.logcat.mode.LogConfig
+import wot.core.manager.ActivityStackManager
 import wot.core.utils.ToastUtils
 
 /**
@@ -31,6 +32,7 @@ open class BaseApplication : Application() {
 
         Logcat.init(this, LogConfig())
         ToastUtils.inject(application)
+        ActivityStackManager.get().init(this)
     }
 
     override fun onTerminate() {

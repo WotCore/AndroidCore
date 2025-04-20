@@ -40,6 +40,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":_lib:logcat"))
+
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
 }
