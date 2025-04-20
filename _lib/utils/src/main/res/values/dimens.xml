@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lib_utils_toast_text_size">15.35sp</dimen>
+    <dimen name="lib_utils_toast_radius">3.84dp</dimen>
+    <dimen name="lib_utils_toast_vertical_padding">14.4dp</dimen>
+    <dimen name="lib_utils_toast_horizontal_padding">19.2dp</dimen>
+</resources>
