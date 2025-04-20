@@ -75,7 +75,7 @@ class FlexibleLiveData<T> : MutableLiveData<T>() {
         private val observerVersion: Long = START_VERSION
     ) : Observer<T> {
 
-        override fun onChanged(t: T?) {
+        override fun onChanged(t: T) {
             // 如果当前版本号大于 observer 的版本号，则更新 observer
             if (currentVersion.get() > observerVersion) {
                 observer.onChanged(t)
