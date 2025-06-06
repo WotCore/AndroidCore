@@ -18,6 +18,7 @@ lifecycle = "2.6.2"
 navigation = "2.7.6"
 coroutines = "1.7.3"
 room = "2.6.1"
+gson = "2.10.1"
 
 #定义依赖项
 [libraries]
@@ -45,3 +46,5 @@ coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-androi
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" } # 用于 kapt
 room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
